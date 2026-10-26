@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Mamma ❤️</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+  color: #633e39;
+  background: linear-gradient(135deg, #f8e8dc, #e9c9ba, #fff2e8);
+  overflow-x: hidden;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: 28px 22px;
+  background: rgba(255,250,245,.96);
+  border: 1px solid #d8a69a;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px #8b5e5730;
+  text-align: center;
+  z-index: 1;
+}
+
+.heart {
+  font-size: 48px;
+  animation: beat 1.5s infinite;
+}
+
+h1 { color: #9e4e58; font-size: 29px; }
+h2 { color: #9e4e58; font-size: 23px; }
+
+p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 20px;
+  margin: 8px 4px;
+  background: #9e4e58;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:hover { background: #773943; }
+
+#letter {
+  display: none;
+  text-align: left;
+  margin-top: 22px;
+  border-top: 1px solid #e5c5b8;
+  padding-top: 18px;
+  animation: appear 1s ease;
+}
+
+.signature {
+  text-align: center;
+  color: #9e4e58;
+  font-weight: bold;
+}
+
+.small { font-size: 13px; color: #8b6b65; }
+
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: floatUp 7s linear forwards;
+  z-index: 0;
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0) rotate(0deg); opacity: 0; }
+  15% { opacity: .8; }
+  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+<main class="card">
+  <div class="heart">❤️</div>
+  <h1>For My Mamma</h1>
+
+  <p><strong>🥺 Mamma, please… isse poora padhna.</strong></p>
+
+  <p>
+    Mujhe darr lagta hai ki kahin tum meri baaton ko
+    galat na samajh lo aur mujhse door na ho jao.
+    Main bas chahta hoon ki tum meri feelings ko bhi samjho. ❤️
+  </p>
+
+  <p class="small">
+    Ye letter kisi shikayat ke liye nahi, bas dil ki baat hai.
+  </p>
+
+  <button onclick="openLetter()">💌 Open My Heart</button>
+  <button id="musicBtn" onclick="toggleMusic()">🎵 Play Music</button>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <section id="letter">
+    <h2>💗 Meri Mamma ke naam</h2>
+
+    <p>
+      Mamma, main aapse ek baat kehna chahta hoon,
+      jo shayad saamne se theek se nahi keh paata.
+    </p>
+
+    <p>
+      Aapke behaviour ka mere din par asar padta hai.
+      Aapse achhi baat ho jaaye toh mera din achha lagta hai,
+      aur jab hum theek se baat nahi kar paate,
+      toh main udaas ho jaata hoon.
+    </p>
+
+    <p>
+      Main aapse ye nahi keh raha ki aap mujhse din bhar
+      baat karo. Main bas itna chahta hoon ki jab aapko
+      waqt mile, toh mujhe bhi apna samjho.
+      Kabhi khud se poochh lo ki main kaisa hoon,
+      mera din kaisa gaya, main kya kar raha hoon.
+      Kyunki main bhi aapse pyaar karta hoon,
+      aur meri bhi feelings hain.
+    </p>
+
+    <p>
+      Ho sakta hai main kabhi aapko theek se samajh nahi
+      paata, aur ho sakta hai aap bhi mujhe na samajh paati ho.
+      Lekin agar humein zindagi ek-doosre ke saath bitani hai,
+      toh humein ek-doosre ko samajhne ki koshish toh karni
+      padegi na? Koi kisi ko ek din mein poori tarah nahi
+      samajh sakta, lekin saath rehkar ek-doosre ko jaan
+      zaroor sakta hai.
+    </p>
+
+    <p>
+      Mamma, main aapse gussa nahi hoon.
+      Main bas kabhi-kabhi chahta hoon ki aap meri khamoshi
+      ke peeche ki feelings ko bhi samjhein.
+      Main har baar shikayat nahi karna chahta,
+      bas chahta hoon ki hum dono ki taraf se pyaar
+      aur koshish ho.
+    </p>
+
+    <p>
+      Main aapse pyaar karta hoon.
+      Lekin main ye bhi chahta hoon ki hum dono ki feelings
+      ko samajhne ki jagah ho. Main aapko majboor nahi
+      karna chahta, bas apne dil ki baat aap tak pahunchana
+      chahta hoon.
+    </p>
+
+    <p>
+      Agar kabhi main kam baat karne lagoon, toh iska matlab
+      ye zaroori nahi ki mera pyaar khatam ho gaya.
+      Kabhi-kabhi mujhe apne mann ko sambhalne ke liye
+      thoda waqt chahiye hota hai.
+    </p>
+
+    <p>
+      Aap mere liye important ho, Mamma.
+      Bas kabhi-kabhi main bhi aapki life mein important
+      mehsoos karna chahta hoon. ❤️
+    </p>
+
+    <p class="signature">
+      Hamesha aapki khushi ki dua karne wala ❤️
+    </p>
+  </section>
+</main>
+
+<script>
+function openLetter() {
+  const letter = document.getElementById("letter");
+  letter.style.display = "block";
+  document.querySelector("button").textContent = "💖 My Heart Is Open";
+}
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+async function toggleMusic() {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicBtn.textContent = "⏸ Pause Music";
+    } catch (error) {
+      alert("music.mp3 file ko index.html ke same folder mein rakho.");
+    }
+  } else {
+    music.pause();
+    musicBtn.textContent = "🎵 Play Music";
+  }
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "floating-heart";
+  heart.textContent = ["❤️", "💕", "🤍", "💗"][
+    Math.floor(Math.random() * 4)
+  ];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (16 + Math.random() * 18) + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(createHeart, 900);
+</script>
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleMusic()" id="musicBtn">
+  🎵 Play Music
+</button>
+
+<script>
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+async function toggleMusic() {
+  if (music.paused) {
+    try {
+      await music.play();
+      btn.textContent = "⏸ Pause Music";
+    } catch (error) {
+      alert("music.mp3 file check karo!");
+    }
+  } else {
+    music.pause();
+    btn.textContent = "🎵 Play Music";
+  }
+}
+</script>
+</body>
+</html>
+</body>
+</html>
